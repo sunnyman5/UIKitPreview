@@ -6,8 +6,8 @@
 //
 
 import UIKit
-//プレビューを表示させる
-import SwiftUI
+//Xcode14でプレビューを表示させる
+//import SwiftUI
 
 
 class SampleViewController: UIViewController {
@@ -35,20 +35,20 @@ class SampleViewController: UIViewController {
     }
 
 }
-//プレビューを表示させる
-struct ViewControllerPreview: PreviewProvider {
-    struct Wrapper: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> some UIViewController {
-            SampleViewController()
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-    static var previews: some View {
-        Wrapper()
-    }
-}
-//Xcode15からできるとされているPreview方法だかエラーでできない
-//#Preview("UIKit") {
-//    ViewController()
+//Xcode14でプレビューを表示させる
+//struct ViewControllerPreview: PreviewProvider {
+//    struct Wrapper: UIViewControllerRepresentable {
+//        func makeUIViewController(context: Context) -> some UIViewController {
+//            SampleViewController()
+//        }
+//        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+//        }
+//    }
+//    static var previews: some View {
+//        Wrapper()
+//    }
 //}
+//Xcode15からプレビューを表示させるコード
+#Preview("UIKit") {
+    SampleViewController()
+}
